@@ -88,7 +88,7 @@ def buildHash(hash,f):
 	for line in f:
 		for word in line.split():
 			cleanWord=word.lower()
-			if (cleanWord) > 0: 
+			if len(cleanWord) > 0: 
 				if cleanWord in hash:
 					hash[cleanWord]+=1
 				else: hash[cleanWord]=1
