@@ -70,6 +70,7 @@ def print_words(filename):
 	buildHash(hash,f)
 	for k,v in hash.items():
 		print k,':',v
+	f.close()
 def print_top(filename):
 	f=open(filename, 'r')
 	hash={}
@@ -81,8 +82,7 @@ def print_top(filename):
 			return
 		print key, ' : ', hash.get(key)
 		count+=1
-	return
-	
+	f.close()
 	
 def buildHash(hash,f):
 	for line in f:
